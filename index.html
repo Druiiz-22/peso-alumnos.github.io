@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso de los Alumnos</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+
+</head>
+
+<body>
+    
+    <main>
+        <h1 class="titulo txt-center">Calcular el peso de los alumnos</h1>
+
+        <p class="mb-20">
+            Se desea realizar una estadistica de los pesos de los alumnos <br>
+            de un colegio, de acuerdo a la siguiente tabla:
+        </p>
+        
+        <ul class="ml-40 mb-30">
+            <li>Alumnos de menos de 40 Kg.</li>
+            <li>Alumnos entre 40 y menos de 50 kg.</li>
+            <li>Alumnos entre 50 y menos de 60 Kg.</li>
+            <li>Alumnos de 60 kg o más.</li>
+        </ul>
+
+        <!-- 
+            Contenedor con display flex con orientación vertical para el 
+            input de la cantidad y el botón de calcular
+        -->
+        <div class="d-flex flex-column">
+            <!-- Input field -->
+            <label id="lblPeso" class="mb-4 bold" for="peso-alumno">Ingrese el peso del alumno 1:</label>
+            <input id="txtPeso" class="field mb-4" type="number" name="peso-alumno">
+            
+            <!-- Botones -->
+            <input id="btnAgregar" class="btn mt-20 b-green" type="submit" value="Agregar alumno" name="btnAdd" onclick="agregar()">
+            <input id="btnCalcular" class="btn mt-20" type="submit" value="Calcular" name="btnCalculos" onclick="calcular()">
+        </div>
+
+        <!-- Contenedor oculto que mostrará los cálculos -->
+        <div id="calculos" class="calculos-box"></div>
+
+    </main>
+
+</body>
+
+</html>
